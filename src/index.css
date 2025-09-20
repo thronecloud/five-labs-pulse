@@ -111,4 +111,77 @@ All colors MUST be HSL.
       inset -1px -1px 0 hsl(var(--card)),
       inset 1px 1px 0 hsl(var(--border));
   }
+  
+  /* 3D Beveled Dialog Box */
+  .retro-dialog {
+    @apply bg-card border-2 border-border rounded-none shadow-lg;
+    box-shadow: 
+      inset 2px 2px 0 hsl(var(--card)),
+      inset -2px -2px 0 hsl(var(--border)),
+      4px 4px 8px rgba(0,0,0,0.4);
+  }
+  
+  /* Start Button Style */
+  .retro-start-button {
+    @apply bg-secondary border border-border px-3 py-1 text-sm font-mono font-bold
+           hover:bg-accent transition-colors duration-75 active:bg-muted;
+    box-shadow: 
+      inset 2px 2px 0 hsl(var(--card)),
+      inset -2px -2px 0 hsl(var(--border));
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--muted)));
+  }
+  
+  .retro-start-button:active {
+    box-shadow: 
+      inset -2px -2px 0 hsl(var(--card)),
+      inset 2px 2px 0 hsl(var(--border));
+  }
+  
+  /* Classic Window Title Bar */
+  .retro-title-bar {
+    @apply bg-primary text-primary-foreground px-2 py-1 text-xs font-mono font-bold;
+    background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+  }
+  
+  /* Toolbar Icons Container */
+  .retro-toolbar {
+    @apply bg-secondary border-b border-border p-1 flex gap-1;
+    background: linear-gradient(180deg, hsl(var(--card)), hsl(var(--secondary)));
+  }
+  
+  /* Classic Error/Info Icons */
+  .retro-icon {
+    @apply w-8 h-8 object-contain;
+  }
+  
+  /* Loading/Hourglass Animation */
+  .retro-loading {
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Scroll Bar Styling */
+  .retro-scrollbar::-webkit-scrollbar {
+    width: 16px;
+  }
+  
+  .retro-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--secondary));
+    border: 1px inset hsl(var(--border));
+  }
+  
+  .retro-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border: 1px outset hsl(var(--border));
+  }
+  
+  .retro-scrollbar::-webkit-scrollbar-button {
+    background: hsl(var(--secondary));
+    border: 1px outset hsl(var(--border));
+    height: 16px;
+  }
 }
