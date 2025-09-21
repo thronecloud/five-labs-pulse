@@ -1,6 +1,6 @@
-import Navigation from "@/components/Navigation";
 import RetroWindow from "@/components/RetroWindow";
 import RetroTaskbar from "@/components/RetroTaskbar";
+import { Button } from "@/components/ui/button";
 import floppyDiskIcon from "@/assets/floppy-disk-icon.png";
 import folderIcon from "@/assets/folder-icon.png";
 import myComputerIcon from "@/assets/my-computer-icon.png";
@@ -32,12 +32,7 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background p-8 pb-16">
       <div className="max-w-4xl mx-auto">
-        <Navigation />
         
-        <div className="retro-toolbar mb-6">
-          <img src={folderIcon} alt="Services" className="retro-icon w-4 h-4" />
-          <span className="text-xs font-bold ml-2">Services Directory - 4 categories available</span>
-        </div>
         
         <RetroWindow title="Our Services" className="mb-8">
           <div className="flex items-start gap-4 mb-6">
@@ -69,45 +64,19 @@ const Services = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="flex justify-end">
-                  <button className="retro-button text-xs">More Info...</button>
-                </div>
               </div>
             ))}
           </div>
           
-          <div className="retro-toolbar mt-6">
-            <span className="text-xs font-bold">Services Loaded: {services.length} categories available</span>
-          </div>
         </RetroWindow>
 
-        <RetroWindow title="Engagement Models">
-          <div className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="retro-dialog p-3 text-center">
-                <div className="w-8 h-8 bg-retro-green rounded-full mx-auto mb-2 flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">A</span>
-                </div>
-                <h4 className="font-bold text-xs mb-2">Project Advisory</h4>
-                <p className="text-xs">Strategic guidance for blockchain projects and protocols</p>
-              </div>
-              <div className="retro-dialog p-3 text-center">
-                <div className="w-8 h-8 bg-retro-purple rounded-full mx-auto mb-2 flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">I</span>
-                </div>
-                <h4 className="font-bold text-xs mb-2">Infrastructure Services</h4>
-                <p className="text-xs">Technical implementation and system development</p>
-              </div>
-              <div className="retro-dialog p-3 text-center">
-                <div className="w-8 h-8 bg-retro-blue rounded-full mx-auto mb-2 flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">T</span>
-                </div>
-                <h4 className="font-bold text-xs mb-2">Trading Solutions</h4>
-                <p className="text-xs">Market analysis and quantitative trading support</p>
-              </div>
-            </div>
+        {/* Footer */}
+        <div className="text-center space-y-4">
+          <div className="flex justify-center gap-2">
+            <Button className="retro-button" onClick={() => window.open('https://x.com/FiveLabsXYZ', '_blank')}>Twitter</Button>
+            <Button className="retro-button" onClick={() => window.open('mailto:contact@fivelabs.xyz')}>Contact</Button>
           </div>
-        </RetroWindow>
+        </div>
       </div>
       
       <RetroTaskbar />

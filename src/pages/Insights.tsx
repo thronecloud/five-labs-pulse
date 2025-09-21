@@ -1,10 +1,9 @@
-import Navigation from "@/components/Navigation";
 import RetroWindow from "@/components/RetroWindow";
 import RetroTaskbar from "@/components/RetroTaskbar";
+import { Button } from "@/components/ui/button";
 import clippyIcon from "@/assets/clippy-icon.png";
 import myComputerIcon from "@/assets/my-computer-icon.png";
 import folderIcon from "@/assets/folder-icon.png";
-import floppyDiskIcon from "@/assets/floppy-disk-icon.png";
 
 const Insights = () => {
   const insights = [
@@ -31,12 +30,6 @@ const Insights = () => {
       title: "Layer 2 Scaling Solutions Comparison",
       summary: "Technical analysis of various Layer 2 solutions and their trade-offs for different use cases and applications.",
       category: "Infrastructure"
-    },
-    {
-      date: "2024-02-20",
-      title: "Institutional Crypto Adoption Trends",
-      summary: "Market research on institutional cryptocurrency adoption patterns and infrastructure requirements.",
-      category: "Research"
     }
   ];
 
@@ -45,7 +38,6 @@ const Insights = () => {
   return (
     <div className="min-h-screen bg-background p-8 pb-16">
       <div className="max-w-4xl mx-auto">
-        <Navigation />
         
         <div className="retro-toolbar mb-6">
           <img src={folderIcon} alt="Insights" className="retro-icon w-4 h-4" />
@@ -95,32 +87,16 @@ const Insights = () => {
               ))}
             </div>
             
-            <div className="retro-toolbar">
-              <span className="text-xs font-bold">Database Status: {insights.length} insights loaded successfully</span>
-            </div>
           </div>
         </RetroWindow>
 
-        <RetroWindow title="Newsletter Signup">
-          <div className="space-y-4">
-            <div className="flex items-start gap-3">
-              <div className="retro-loading w-6 h-6 flex-shrink-0">
-                <img src={floppyDiskIcon} alt="Save" className="retro-icon w-6 h-6" />
-              </div>
-              <p className="text-sm leading-relaxed">
-                Subscribe to receive our weekly insights on blockchain technology, market analysis, and trading strategies.
-              </p>
-            </div>
-            <div className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="Enter your email"
-                className="flex-1 bg-input border border-border px-3 py-1 text-xs font-mono"
-              />
-              <button className="retro-button">Subscribe</button>
-            </div>
+        {/* Footer */}
+        <div className="text-center space-y-4">
+          <div className="flex justify-center gap-2">
+            <Button className="retro-button" onClick={() => window.open('https://x.com/FiveLabsXYZ', '_blank')}>Twitter</Button>
+            <Button className="retro-button" onClick={() => window.open('mailto:contact@fivelabs.xyz')}>Contact</Button>
           </div>
-        </RetroWindow>
+        </div>
       </div>
       
       <RetroTaskbar />

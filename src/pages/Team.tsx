@@ -1,6 +1,6 @@
-import Navigation from "@/components/Navigation";
 import RetroWindow from "@/components/RetroWindow";
 import RetroTaskbar from "@/components/RetroTaskbar";
+import { Button } from "@/components/ui/button";
 import folderIcon from "@/assets/folder-icon.png";
 import myComputerIcon from "@/assets/my-computer-icon.png";
 
@@ -31,7 +31,6 @@ const Team = () => {
   return (
     <div className="min-h-screen bg-background p-8 pb-16">
       <div className="max-w-4xl mx-auto">
-        <Navigation />
         
         <RetroWindow title="Team" className="mb-8">
           <div className="space-y-6">
@@ -76,6 +75,14 @@ const Team = () => {
             </p>
           </div>
         </RetroWindow>
+
+        {/* Footer */}
+        <div className="text-center space-y-4">
+          <div className="flex justify-center gap-2">
+            <Button className="retro-button" onClick={() => window.open('https://x.com/FiveLabsXYZ', '_blank')}>Twitter</Button>
+            <Button className="retro-button" onClick={() => window.open('mailto:contact@fivelabs.xyz')}>Contact</Button>
+          </div>
+        </div>
       </div>
       
       <RetroTaskbar />

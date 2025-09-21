@@ -10,7 +10,7 @@ const RetroWindow = ({ title, children, className = "" }: RetroWindowProps) => {
       <div className="bg-secondary border-b border-border px-3 py-1 text-xs font-mono font-bold">
         {title}
       </div>
-      <div className="p-4">
+      <div className="p-4 flex-1 flex flex-col">
         {children}
       </div>
     </div>
