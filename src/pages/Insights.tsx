@@ -24,12 +24,6 @@ const Insights = () => {
       title: "Building Sustainable Token Economics",
       summary: "Framework for designing token economics that align incentives and create long-term value for protocol participants.",
       category: "Strategy"
-    },
-    {
-      date: "2024-02-28",
-      title: "Layer 2 Scaling Solutions Comparison",
-      summary: "Technical analysis of various Layer 2 solutions and their trade-offs for different use cases and applications.",
-      category: "Infrastructure"
     }
   ];
 
