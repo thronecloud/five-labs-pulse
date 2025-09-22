@@ -29,8 +29,13 @@ const RetroTaskbar = () => {
         </div>
       </div>
       
-      <div className="bg-muted border border-border px-2 py-1 text-xs font-mono">
-        {currentTime}
+      <div className="flex items-center gap-3">
+        <div className="text-xs font-mono text-muted-foreground">
+          📍 Network School, Singapore
+        </div>
+        <div className="bg-muted border border-border px-2 py-1 text-xs font-mono">
+          {currentTime}
+        </div>
       </div>
     </div>
   );
