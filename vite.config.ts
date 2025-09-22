@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/five-labs-pulse/',   // Critical for project Pages
+  base: mode === 'production' ? '/five-labs-pulse/' : '/',
   server: {
     host: "::",
     port: 8080,
