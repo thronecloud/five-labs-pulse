@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/five-labs-pulse/',
+  base: '/',  // Use root for custom domain
   server: {
     host: "::",
     port: 8080,
